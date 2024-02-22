@@ -199,8 +199,8 @@ class PopCircleProgress @JvmOverloads constructor(
         return mMaxProgress
     }
 
-    fun setProgressSmooth(startProgress: Int, intProgress: Int, during: Long) {
-        val anim = ValueAnimator.ofInt(startProgress, intProgress)
+    fun setProgressSmooth(startProgress: Int, endProgress: Int, during: Long) {
+        val anim = ValueAnimator.ofInt(startProgress, endProgress)
         anim.interpolator = LinearInterpolator()
         anim.addUpdateListener {
             val value = it.animatedValue as Int
