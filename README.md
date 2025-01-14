@@ -29,7 +29,7 @@
 
 #### 用法：
 - 1.将PopCircleProgress拷贝到你的项目中
-- 2.将attrs的内容拷贝到你的项目attrs中
+- 2.将attrs的内容拷贝到你的项目res/values/attrs.xml文件中(没有的话新建一个)
 - 3.在你的布局中使用：
  ```
    <com.tomato.amelia.customviewstudy.view.PopCircleProgress
