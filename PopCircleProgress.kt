@@ -79,7 +79,7 @@ class PopCircleProgress @JvmOverloads constructor(
         mChildProgressColor = typeArray.getColor(R.styleable.PopCircleProgress_childProgressColor, Color.parseColor("#81B29A"))
         mIsShowChildProgress = typeArray.getBoolean(R.styleable.PopCircleProgress_isShowChildProgress, true)
         mProgressRepelAngle = typeArray.getFloat(R.styleable.PopCircleProgress_progressRepelAngle, 0f)
-        mPathColor = typeArray.getColor(R.styleable.PopCircleProgress_pathColor, -1)
+        mPathColor = typeArray.getColor(R.styleable.PopCircleProgress_pathColor, Color.parseColor("#FFFFFF"))
         mPathPadding = typeArray.getDimension(R.styleable.PopCircleProgress_pathPadding, 0f)
         mIsClockwise = typeArray.getBoolean(R.styleable.PopCircleProgress_isClockwise, true)
         typeArray.recycle()
@@ -149,9 +149,7 @@ class PopCircleProgress @JvmOverloads constructor(
             // canvas.scale(1f, -1f, 0f,measuredHeight / 2f)
         }
         //绘制Path
-        if (mPathColor != -1) {
-            canvas.drawArc(progressCircleRectF, -90f, 360f, false, pathPaint)
-        }
+        canvas.drawArc(progressCircleRectF, -90f, 360f, false, pathPaint)
         if (mProgress != 0) {
             //绘主制进度条
             val progressAngle = (mProgress.toFloat() / mMaxProgress.toFloat()) * 360
